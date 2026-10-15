@@ -21,7 +21,7 @@ export function SiteHeader() {
       <div className="flex items-center justify-between gap-4 px-6 py-2 text-xs tracking-wide text-muted-foreground lg:px-12">
         <p className="truncate">{addressLine}</p>
         <div className="flex shrink-0 items-center gap-4">
-          <a className="hover:text-primary" href={shop.instagram} target="_blank" rel="noreferrer">
+          <a className="hover:text-primary" href={shop.instagram}>
             {shop.instagramHandle}
           </a>
           <a className="hover:text-primary" href={`tel:${shop.phoneTel}`}>
@@ -93,12 +93,7 @@ export function SiteHeader() {
                 ))}
               </nav>
               <div className="mt-auto grid gap-3 p-4">
-                <a
-                  className="text-sm text-primary hover:underline"
-                  href={shop.instagram}
-                  target="_blank"
-                  rel="noreferrer"
-                >
+                <a className="text-sm text-primary hover:underline" href={shop.instagram}>
                   Instagram {shop.instagramHandle}
                 </a>
                 <Button className="h-11 w-full" render={<Link href="/contact" />}>

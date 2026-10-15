@@ -44,12 +44,7 @@ export default async function ContactPage({
             </div>
             <div>
               <p className="text-xs tracking-[0.18em] text-primary uppercase">Social</p>
-              <a
-                className="mt-2 block hover:text-primary"
-                href={shop.instagram}
-                target="_blank"
-                rel="noreferrer"
-              >
+              <a className="mt-2 block hover:text-primary" href={shop.instagram}>
                 Instagram {shop.instagramHandle}
               </a>
               <a

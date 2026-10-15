@@ -38,12 +38,7 @@ export function SiteFooter() {
           <a className="mt-3 block text-sm hover:text-primary" href={`tel:${shop.phoneTel}`}>
             {shop.phoneDisplay}
           </a>
-          <a
-            className="mt-2 block text-sm hover:text-primary"
-            href={shop.instagram}
-            target="_blank"
-            rel="noreferrer"
-          >
+          <a className="mt-2 block text-sm hover:text-primary" href={shop.instagram}>
             Instagram {shop.instagramHandle}
           </a>
           <a

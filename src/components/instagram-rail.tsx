@@ -9,12 +9,7 @@ export function InstagramRail() {
           <p className="text-xs tracking-[0.22em] text-primary uppercase">Instagram</p>
           <h2 className="mt-3 font-heading text-4xl sm:text-5xl">From {shop.instagramHandle}</h2>
         </div>
-        <a
-          href={shop.instagram}
-          target="_blank"
-          rel="noreferrer"
-          className="shrink-0 text-sm text-primary hover:underline"
-        >
+        <a href={shop.instagram} className="shrink-0 text-sm text-primary hover:underline">
           Follow the shop
         </a>
       </div>
@@ -24,13 +19,7 @@ export function InstagramRail() {
       </p>
       <div className="snap-row mt-8 flex gap-4 overflow-x-auto px-6 pb-4 lg:px-12">
         {instagramPosts.map((post) => (
-          <a
-            key={post.href}
-            href={post.href}
-            target="_blank"
-            rel="noreferrer"
-            className="w-44 shrink-0 sm:w-56"
-          >
+          <a key={post.href} href={post.href} className="w-44 shrink-0 sm:w-56">
             <div className="relative aspect-[9/16] overflow-hidden bg-card">
               <Image
                 src={post.src}
