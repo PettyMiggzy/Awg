@@ -256,6 +256,10 @@ export const services: Service[] = [
       "Coverage and the artwork decide the final price.",
       "Send photos with the inquiry so the estimate is based on the actual receiver.",
     ],
+    image: "/images/brand/receiver.jpg",
+    imageAlt: "Gold scroll engraving studied on dark steel",
+    imageNote:
+      "Artwork made for this site. Not a job from the shop.",
     notes: ["Shipping is calculated from your location.", shippingNote],
   },
   {
@@ -284,6 +288,10 @@ export const services: Service[] = [
       "Bring the item if it can take a laser. The shop will say so if it cannot.",
       "There is no single published price. Send a photo for a quote.",
     ],
+    image: "/images/brand/gift.jpg",
+    imageAlt: "Engraved brass plaque blank in an open gift box",
+    imageNote:
+      "Artwork made for this site. Not a job from the shop.",
     notes: ["Eligible engraved goods can ship inside the United States."],
   },
   {
@@ -330,6 +338,10 @@ export const services: Service[] = [
       "The person on the paperwork is the person who completes the background check and takes the firearm.",
       "Pickup requires a valid government photo ID, any state paperwork that applies, ATF Form 4473, and a passed background check.",
     ],
+    image: "/images/brand/transfer.jpg",
+    imageAlt: "Shop counter with a ledger, pen and service bell",
+    imageNote:
+      "Artwork made for this site. Not a job from the shop.",
     notes: ["Appointments are recommended so the transfer gets a full block of time."],
   },
 ];
