@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { nav, shop, addressLine } from "@/lib/site";
 
@@ -6,8 +7,14 @@ export function SiteFooter() {
     <footer className="border-t border-border px-6 py-14 lg:px-12">
       <div className="mx-auto grid max-w-6xl gap-10 md:grid-cols-4">
         <div className="md:col-span-2">
-          <p className="font-heading text-3xl">{shop.name}</p>
-          <p className="mt-3 max-w-sm text-sm leading-relaxed text-muted-foreground">
+          <Image
+            src="/images/brand/logo-lockup.png"
+            alt={shop.name}
+            width={1398}
+            height={778}
+            className="h-24 w-auto"
+          />
+          <p className="mt-4 max-w-sm text-sm leading-relaxed text-muted-foreground">
             Licensed FFL in Indianapolis for engraving, Cerakote, machining, sales,
             and transfers. Established {shop.established}.
           </p>

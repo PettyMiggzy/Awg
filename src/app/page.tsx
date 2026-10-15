@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { LoopFilm } from "@/components/loop-film";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import {
@@ -44,8 +45,15 @@ const steps = [
 export default function HomePage() {
   return (
     <>
-      <section className="grid min-h-[calc(100svh-7.5rem)] lg:grid-cols-12">
+      <section className="grid min-h-[calc(100svh-8.5rem)] bg-black lg:grid-cols-12">
         <div className="flex flex-col justify-end px-6 py-14 lg:col-span-5 lg:px-12 lg:py-16">
+          <LoopFilm
+            src="/videos/logo.mp4"
+            poster="/images/brand/logo-poster.jpg"
+            className="mb-8 h-32 w-auto sm:h-40"
+            priority
+            label={shop.name}
+          />
           <p className="text-xs font-medium tracking-[0.22em] text-primary uppercase">
             Licensed FFL · Indianapolis · Est. {shop.established}
           </p>
@@ -72,14 +80,15 @@ export default function HomePage() {
           </div>
         </div>
         <div className="relative min-h-[70vw] lg:col-span-7 lg:min-h-0">
-          <Image
-            src="/images/ports.jpg"
-            alt="Ported handgun slide with a gold barrel"
-            fill
+          <LoopFilm
+            src="/videos/bench.mp4"
+            poster="/images/brand/bench.jpg"
+            className="absolute inset-0 h-full w-full object-cover"
             priority
-            sizes="(min-width: 1024px) 58vw, 100vw"
-            className="object-cover"
           />
+          <p className="absolute right-4 bottom-4 left-4 max-w-xs text-[11px] leading-relaxed tracking-wide text-ivory/90 sm:left-auto">
+            Finish study for the shop. Not a firearm for sale.
+          </p>
         </div>
       </section>
 
@@ -145,6 +154,29 @@ export default function HomePage() {
         <Link href="/services" className="mx-auto mt-6 block max-w-6xl text-sm text-primary hover:underline sm:hidden">
           Full price list
         </Link>
+      </section>
+
+      <section className="relative isolate min-h-[28rem] overflow-hidden border-y border-border bg-black">
+        <LoopFilm
+          src="/videos/scroll.mp4"
+          poster="/images/brand/scroll.jpg"
+          className="absolute inset-0 h-full w-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-black/10" />
+        <div className="relative flex min-h-[28rem] max-w-xl flex-col justify-end px-6 py-14 lg:px-12">
+          <p className="text-xs tracking-[0.22em] text-primary uppercase">The cut</p>
+          <h2 className="mt-3 font-heading text-4xl sm:text-5xl">Gold, set into steel.</h2>
+          <p className="mt-4 leading-relaxed text-ivory/85">
+            A moving study of scroll engraving. It is not a job leaving the bench.
+            The camera roll under this is.
+          </p>
+          <Link
+            href="/services/engraved-pistol"
+            className={cn(buttonVariants({}), "mt-6 h-11 w-fit rounded-sm px-5")}
+          >
+            Engraving
+          </Link>
+        </div>
       </section>
 
       <section className="border-t border-border py-16 lg:py-24">

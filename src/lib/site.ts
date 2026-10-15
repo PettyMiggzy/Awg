@@ -31,6 +31,7 @@ export type Service = {
   notes: string[];
   image?: string;
   imageAlt?: string;
+  imageNote?: string;
   limited?: boolean;
 };
 
@@ -162,8 +163,10 @@ export const services: Service[] = [
       "Shipping is added based on location.",
     ],
     notes: [shippingNote],
-    image: "/images/rifle-barrel.jpg",
-    imageAlt: "Engraved rifle receiver with gold controls and an AWG magazine",
+    image: "/images/brand/coated-barrel.jpg",
+    imageAlt: "Bronze ceramic finish on an unbranded rifle barrel",
+    imageNote:
+      "A finish study made for the site, not a customer barrel and not a gun for sale. The deposit is still based on the barrel you send.",
   },
   {
     slug: "cerakote-shotgun-receiver",
@@ -177,6 +180,10 @@ export const services: Service[] = [
       "This is custom work, confirmed before coating starts.",
     ],
     notes: ["Shipping is calculated from your location.", shippingNote],
+    image: "/images/brand/coated-receiver.jpg",
+    imageAlt: "Bronze ceramic finish on an unbranded receiver",
+    imageNote:
+      "A finish study made for the site, not a customer receiver and not a gun for sale. The job is still quoted from the receiver you send.",
   },
   {
     slug: "engraved-pistol",

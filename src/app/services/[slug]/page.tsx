@@ -79,11 +79,8 @@ export default async function ServicePage({
               <li key={note}>{note}</li>
             ))}
           </ul>
-          {service.image === "/images/rifle-barrel.jpg" ? (
-            <p className="mt-4 max-w-xl text-sm text-muted-foreground">
-              The photo is rifle engraving from the bench, not a coated barrel. Barrel
-              Cerakote is still quoted from the barrel you send.
-            </p>
+          {service.imageNote ? (
+            <p className="mt-4 max-w-xl text-sm text-muted-foreground">{service.imageNote}</p>
           ) : null}
           <Link
             href="#inquire"

@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { Menu } from "lucide-react";
+import { LoopFilm } from "@/components/loop-film";
 import { shop, nav, addressLine } from "@/lib/site";
 import { Button } from "@/components/ui/button";
 import {
@@ -16,7 +17,7 @@ import {
 
 export function SiteHeader() {
   return (
-    <header className="sticky top-0 z-40 border-b border-border bg-background/90 backdrop-blur-md">
+    <header className="sticky top-0 z-40 border-b border-border bg-black/92 backdrop-blur-md">
       <div className="flex items-center justify-between gap-4 px-6 py-2 text-xs tracking-wide text-muted-foreground lg:px-12">
         <p className="truncate">{addressLine}</p>
         <a className="shrink-0 hover:text-primary" href={`tel:${shop.phoneTel}`}>
@@ -24,14 +25,12 @@ export function SiteHeader() {
         </a>
       </div>
       <div className="flex items-center justify-between gap-6 px-6 py-3 lg:px-12">
-        <Link href="/" className="flex items-center gap-3">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src="/images/logo.png"
-            alt=""
-            width={48}
-            height={77}
-            className="h-14 w-auto"
+        <Link href="/" className="block shrink-0">
+          <LoopFilm
+            src="/videos/logo.mp4"
+            poster="/images/brand/logo-poster.jpg"
+            className="h-14 w-auto sm:h-16"
+            priority
           />
           <span className="sr-only">{shop.name}</span>
         </Link>
