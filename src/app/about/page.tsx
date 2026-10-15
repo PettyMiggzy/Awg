@@ -40,17 +40,19 @@ export default function AboutPage() {
         lede="AWG Custom Designs was founded in 2024 with one goal: high-quality craftsmanship a customer can trust. Firearm sales and transfers, laser engraving, Cerakote, optic cuts, custom porting, and designs that are meant to be one of one."
       />
       <section className="grid lg:grid-cols-2">
-        <div className="relative min-h-96">
+        <div className="flex items-end justify-center bg-black px-8 pt-10">
           <Image
-            src="/images/rifle-barrel.jpg"
-            alt="Close view of an engraved rifle receiver with gold controls and an AWG magazine"
-            fill
-            sizes="(min-width: 1024px) 50vw, 100vw"
-            className="object-cover"
+            src="/images/mr-awg.jpg"
+            alt="Mr. AWG, founder of AWG Custom Designs"
+            width={900}
+            height={1200}
+            className="h-auto max-h-[40rem] w-auto"
+            priority
           />
         </div>
         <div className="flex flex-col justify-center px-6 py-14 lg:px-12">
-          <h2 className="font-heading text-4xl">The mission, in their words.</h2>
+          <p className="text-xs tracking-[0.22em] text-primary uppercase">Mr. AWG</p>
+          <h2 className="mt-3 font-heading text-4xl">The mission, in their words.</h2>
           <p className="mt-5 text-lg leading-relaxed text-muted-foreground">
             Exceptional craftsmanship, honest service, and customization that is supposed
             to beat the expectation. Precision and integrity, and a project finished with
