@@ -38,10 +38,20 @@ export function SiteFooter() {
           <a className="mt-3 block text-sm hover:text-primary" href={`tel:${shop.phoneTel}`}>
             {shop.phoneDisplay}
           </a>
-          <a className="mt-2 block text-sm hover:text-primary" href={shop.instagram}>
+          <a
+            className="mt-2 block text-sm hover:text-primary"
+            href={shop.instagram}
+            target="_blank"
+            rel="noreferrer"
+          >
             Instagram {shop.instagramHandle}
           </a>
-          <a className="mt-2 block text-sm hover:text-primary" href={shop.tiktok}>
+          <a
+            className="mt-2 block text-sm hover:text-primary"
+            href={shop.tiktok}
+            target="_blank"
+            rel="noreferrer"
+          >
             TikTok {shop.tiktokHandle}
           </a>
         </div>

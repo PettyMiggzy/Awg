@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { InstagramRail } from "@/components/instagram-rail";
 import { LoopFilm } from "@/components/loop-film";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -211,6 +212,8 @@ export default function HomePage() {
           ))}
         </div>
       </section>
+
+      <InstagramRail />
 
       <section className="bg-ivory px-6 py-16 text-ink lg:px-12 lg:py-24">
         <div className="mx-auto max-w-6xl">

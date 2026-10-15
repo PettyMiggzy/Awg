@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { InstagramRail } from "@/components/instagram-rail";
 import { PageHero } from "@/components/page-hero";
 import { work } from "@/lib/site";
 
@@ -16,7 +17,7 @@ export default function WorkPage() {
       <PageHero
         eyebrow="Work"
         title="The photos are the portfolio."
-        lede="Ports, optic cuts, Cerakote, engraving, stipple, and fitted cases from the Indianapolis bench. Each photo is work the shop published."
+        lede="Ports, optic cuts, Cerakote, engraving, stipple, and fitted cases from the Indianapolis bench. The grid is work the shop published. The row under it is from @mr.awg."
       />
       <section className="px-6 py-12 lg:px-12 lg:py-16">
         <div className="mx-auto columns-1 gap-6 sm:columns-2 lg:columns-3">
@@ -41,6 +42,7 @@ export default function WorkPage() {
           ))}
         </div>
       </section>
+      <InstagramRail />
     </>
   );
 }

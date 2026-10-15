@@ -8,7 +8,7 @@ export const shop = {
   region: "IN",
   postal: "46268",
   established: 2024,
-  instagram: "https://www.instagram.com/mr.awg",
+  instagram: "https://www.instagram.com/mr.awg?psln=MW1ob2Y4NTJpcGYydw==",
   instagramHandle: "@mr.awg",
   tiktok: "https://www.tiktok.com/@mrawg1",
   tiktokHandle: "@mrawg1",
@@ -16,6 +16,51 @@ export const shop = {
 } as const;
 
 export const addressLine = `${shop.street}, ${shop.city}, ${shop.region} ${shop.postal}`;
+
+export const instagramPosts = [
+  {
+    src: "/images/instagram/ports.jpg",
+    alt: "Bronze slide with cross-shaped ports, held in a black glove",
+    title: "Cross ports",
+    caption: "A 19X with cross ports.",
+    href: "https://www.instagram.com/reel/DcuM9l_B-rM/",
+  },
+  {
+    src: "/images/instagram/mirror.jpg",
+    alt: "Mirror-polished pistol slide reflecting the shop",
+    title: "Mirror polish",
+    caption: "A slide brought to a mirror before the engraving.",
+    href: "https://www.instagram.com/reel/DeUqxOQMQk5/",
+  },
+  {
+    src: "/images/instagram/scroll.jpg",
+    alt: "Scroll engraving in progress on a polished slide",
+    title: "Scroll engraving",
+    caption: "A full engraving, still on the bench in the reel.",
+    href: "https://www.instagram.com/reel/DeFdJnuPcbF/",
+  },
+  {
+    src: "/images/instagram/optic.jpg",
+    alt: "FDE slide with a fresh optic cut, in front of the Mr. AWG sign",
+    title: "Optic cut",
+    caption: "A DeltaPoint Pro cut the shop turned in a day.",
+    href: "https://www.instagram.com/reel/DdWpVNdSt5B/",
+  },
+  {
+    src: "/images/instagram/stipple.jpg",
+    alt: "Stippled grip on a Bodyguard 2.0 in front of the shop sign",
+    title: "Stipple",
+    caption: "Grip texture on a Bodyguard 2.0.",
+    href: "https://www.instagram.com/reel/DdxXd2aRT-K/",
+  },
+  {
+    src: "/images/instagram/bench.jpg",
+    alt: "Sparks coming off a slide being ported on the bench",
+    title: "On the wheel",
+    caption: "Porting in the shop. The reel calls it a one-day job.",
+    href: "https://www.instagram.com/reel/Dcwf-V4BR_3/",
+  },
+] as const;
 
 export type PriceKind = "flat" | "deposit" | "starting" | "quote";
 export type ServiceCategory = "Machining" | "Cerakote" | "Engraving" | "Shop";

@@ -20,9 +20,14 @@ export function SiteHeader() {
     <header className="sticky top-0 z-40 border-b border-border bg-black/92 backdrop-blur-md">
       <div className="flex items-center justify-between gap-4 px-6 py-2 text-xs tracking-wide text-muted-foreground lg:px-12">
         <p className="truncate">{addressLine}</p>
-        <a className="shrink-0 hover:text-primary" href={`tel:${shop.phoneTel}`}>
-          {shop.phoneDisplay}
-        </a>
+        <div className="flex shrink-0 items-center gap-4">
+          <a className="hover:text-primary" href={shop.instagram} target="_blank" rel="noreferrer">
+            {shop.instagramHandle}
+          </a>
+          <a className="hover:text-primary" href={`tel:${shop.phoneTel}`}>
+            {shop.phoneDisplay}
+          </a>
+        </div>
       </div>
       <div className="flex items-center justify-between gap-6 px-6 py-3 lg:px-12">
         <Link href="/" className="block shrink-0">
@@ -87,7 +92,15 @@ export function SiteHeader() {
                   </SheetClose>
                 ))}
               </nav>
-              <div className="mt-auto p-4">
+              <div className="mt-auto grid gap-3 p-4">
+                <a
+                  className="text-sm text-primary hover:underline"
+                  href={shop.instagram}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Instagram {shop.instagramHandle}
+                </a>
                 <Button className="h-11 w-full" render={<Link href="/contact" />}>
                   Book a session
                 </Button>

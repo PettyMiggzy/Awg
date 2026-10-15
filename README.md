@@ -4,7 +4,7 @@ A clearer site for [AWG Custom Designs](https://www.awgcustomdesigns.com/), the 
 
 It is a preview, not a checkout. Firearm sales still happen in person under federal and Indiana law. The inquiry form prepares a note you can call or text. It does not email the shop or charge a card.
 
-The gold mark, the bench film, and the engraving film were made for this site. They are not stock photos, and they are not the guns for sale. Listings still use the shop’s own photographs. Copy `.env.example` to `.env` if you regenerate artwork. The key stays on your machine.
+The gold mark, the bench film, and the engraving film were made for this site. They are not stock photos, and they are not the guns for sale. Listings still use the shop’s own photographs. The Instagram row uses frames from [@mr.awg](https://www.instagram.com/mr.awg/). Copy `.env.example` to `.env` if you regenerate artwork. The key stays on your machine.
 
 ## Run it
 
