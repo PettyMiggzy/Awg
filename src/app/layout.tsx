@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: shop.name,
     description,
-    images: ["/images/brand/logo-poster.jpg"],
+    images: ["/images/venice/og-card.webp"],
     locale: "en_US",
     type: "website",
   },
@@ -40,7 +40,7 @@ const jsonLd = {
   name: shop.name,
   telephone: shop.phoneTel,
   url: "https://www.awgcustomdesigns.com",
-  image: "/images/brand/logo-poster.jpg",
+  image: "/images/venice/og-card.webp",
   address: {
     "@type": "PostalAddress",
     streetAddress: shop.street,

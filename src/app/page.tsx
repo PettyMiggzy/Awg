@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { InstagramRail } from "@/components/instagram-rail";
+import { Reveal } from "@/components/reveal";
 import { LoopFilm } from "@/components/loop-film";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -46,7 +47,16 @@ const steps = [
 export default function HomePage() {
   return (
     <>
-      <section className="grid min-h-[calc(100svh-8.5rem)] bg-black lg:grid-cols-12">
+      <section className="grain relative isolate grid min-h-[calc(100svh-8.5rem)] bg-black lg:grid-cols-12">
+        <Image
+          src="/images/venice/hero-atmosphere.webp"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="-z-10 object-cover opacity-30"
+        />
+        <div className="absolute inset-0 -z-10 bg-gradient-to-r from-black via-black/80 to-black/20" />
         <div className="flex flex-col justify-end px-6 py-14 lg:col-span-5 lg:px-12 lg:py-16">
           <LoopFilm
             src="/videos/logo.mp4"
@@ -59,7 +69,7 @@ export default function HomePage() {
             Licensed FFL · Indianapolis · Est. {shop.established}
           </p>
           <h1 className="mt-5 font-heading text-5xl leading-[0.98] text-balance sm:text-6xl lg:text-7xl">
-            One-of-one firearms, finished at the bench.
+            One-of-one firearms, <span className="gold-text">finished at the bench.</span>
           </h1>
           <p className="mt-6 max-w-md text-lg leading-relaxed text-muted-foreground">
             Engraving, Cerakote, optic cuts, porting, polishing, sales, and transfers.
@@ -91,6 +101,44 @@ export default function HomePage() {
             Finish study for the shop. Not a firearm for sale.
           </p>
         </div>
+      </section>
+
+      <div className="overflow-hidden border-b border-border bg-card py-4" aria-hidden="true">
+        <div className="marquee gap-10 pr-10 font-heading text-2xl text-primary/80">
+          {[0, 1].map((n) => (
+            <div key={n} className="flex shrink-0 items-center gap-10">
+              {["Laser engraving", "Cerakote", "Optic cuts", "Porting", "Mirror polish", "Stippling", "Sales", "Transfers"].map((t) => (
+                <span key={`${n}-${t}`} className="flex items-center gap-10 whitespace-nowrap">
+                  {t}
+                  <span className="text-primary/40">◆</span>
+                </span>
+              ))}
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <section className="grain relative isolate overflow-hidden border-b border-border px-6 py-16 lg:px-12 lg:py-24">
+        <Image
+          src="/images/venice/texture-scroll.webp"
+          alt=""
+          fill
+          sizes="100vw"
+          className="-z-10 object-cover opacity-25"
+        />
+        <div className="absolute inset-0 -z-10 bg-gradient-to-b from-background via-background/60 to-background" />
+        <Reveal className="mx-auto grid max-w-6xl gap-10 text-center sm:grid-cols-3">
+          {[
+            [`${services.length}+`, "services on the menu"],
+            [`${shop.established}`, "bench opened in Indianapolis"],
+            ["FFL", "licensed sales and transfers"],
+          ].map(([big, small]) => (
+            <div key={small}>
+              <p className="gold-text font-heading text-6xl sm:text-7xl">{big}</p>
+              <p className="mt-2 text-xs tracking-[0.22em] text-muted-foreground uppercase">{small}</p>
+            </div>
+          ))}
+        </Reveal>
       </section>
 
       <section className="grid border-y border-border lg:grid-cols-2">
@@ -134,7 +182,7 @@ export default function HomePage() {
             <Link
               key={service.slug}
               href={`/services/${service.slug}`}
-              className="group border border-border bg-card"
+              className="group lift border border-border bg-card"
             >
               <div className="relative aspect-[4/5] overflow-hidden">
                 <Image
