@@ -16,7 +16,7 @@ export default function WorkPage() {
       <PageHero
         eyebrow="Work"
         title="The photos are the portfolio."
-        lede="These are pieces published by the shop. The old site still had leftover template projects that were never AWG work. Those are gone."
+        lede="Ports, optic cuts, Cerakote, engraving, stipple, and fitted cases from the Indianapolis bench. Each photo is work the shop published."
       />
       <section className="px-6 py-12 lg:px-12 lg:py-16">
         <div className="mx-auto columns-1 gap-6 sm:columns-2 lg:columns-3">
