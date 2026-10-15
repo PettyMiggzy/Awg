@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { AddToCart } from "@/components/add-to-cart";
 import { InquiryForm } from "@/components/inquiry-form";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -82,12 +83,15 @@ export default async function ServicePage({
           {service.imageNote ? (
             <p className="mt-4 max-w-xl text-sm text-muted-foreground">{service.imageNote}</p>
           ) : null}
-          <Link
-            href="#inquire"
-            className={cn(buttonVariants({}), "mt-8 h-11 rounded-sm px-5")}
-          >
-            Inquire about this
-          </Link>
+          <div className="mt-8 flex flex-wrap items-center gap-4">
+            <AddToCart id={service.slug} />
+            <Link
+              href="#inquire"
+              className={cn(buttonVariants({ variant: "outline" }), "h-10 rounded-sm px-5")}
+            >
+              Inquire about this
+            </Link>
+          </div>
         </div>
       </section>
       <section id="inquire" className="border-t border-border px-6 py-16 lg:px-12">

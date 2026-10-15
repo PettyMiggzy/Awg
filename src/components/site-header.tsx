@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { Menu } from "lucide-react";
+import { CartButton } from "@/components/cart-drawer";
 import { LoopFilm } from "@/components/loop-film";
 import { shop, nav, addressLine } from "@/lib/site";
 import { Button } from "@/components/ui/button";
@@ -51,6 +52,7 @@ export function SiteHeader() {
           ))}
         </nav>
         <div className="flex items-center gap-2">
+          <CartButton />
           <Button
             className="hidden h-10 rounded-sm px-4 lg:inline-flex"
             render={<Link href="/contact" />}

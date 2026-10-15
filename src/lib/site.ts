@@ -603,6 +603,7 @@ export const faqs = [
 ] as const;
 
 export const nav = [
+  { href: "/shop", label: "Shop" },
   { href: "/work", label: "Work" },
   { href: "/services", label: "Services" },
   { href: "/firearms", label: "Firearms" },

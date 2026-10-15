@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { AddToCart } from "@/components/add-to-cart";
 import { notFound } from "next/navigation";
 import { InquiryForm } from "@/components/inquiry-form";
 import { firearms, formatMoney, getFirearm, shop } from "@/lib/site";
@@ -95,9 +96,12 @@ export default async function FirearmPage({
               before anyone ships one.
             </p>
           </div>
-          <Link href="#inquire" className="mt-6 inline-block text-sm text-primary hover:underline">
-            Ask about this gun
-          </Link>
+          <div className="mt-6 flex flex-wrap items-center gap-5">
+            <AddToCart id={firearm.slug} />
+            <Link href="#inquire" className="text-sm text-primary hover:underline">
+              Ask about this gun
+            </Link>
+          </div>
         </div>
       </section>
       <section id="inquire" className="border-t border-border px-6 py-16 lg:px-12">

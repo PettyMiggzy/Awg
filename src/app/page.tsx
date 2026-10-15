@@ -73,10 +73,10 @@ export default function HomePage() {
               Book a session
             </Link>
             <Link
-              href="/services"
+              href="/shop"
               className={cn(buttonVariants({ variant: "outline" }), "h-11 rounded-sm px-5")}
             >
-              See the menu
+              Shop now
             </Link>
           </div>
         </div>

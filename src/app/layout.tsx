@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Fraunces, Outfit } from "next/font/google";
+import { CartDrawer } from "@/components/cart-drawer";
+import { CartProvider } from "@/components/cart-provider";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { shop } from "@/lib/site";
@@ -66,9 +68,12 @@ export default function RootLayout({
         >
           Skip to content
         </a>
-        <SiteHeader />
-        <main id="content">{children}</main>
-        <SiteFooter />
+        <CartProvider>
+          <SiteHeader />
+          <main id="content">{children}</main>
+          <SiteFooter />
+          <CartDrawer />
+        </CartProvider>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
