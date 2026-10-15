@@ -13,6 +13,7 @@ export default function ServicesPage() {
   return (
     <>
       <PageHero
+        art="/images/brand/head-svc.jpg"
         eyebrow="Services"
         title="A menu, not a mystery cart."
         lede="These are the prices AWG publishes. Deposits are labeled as deposits. Anything marked quoted is priced after the shop sees the project. Custom orders are generally non-refundable once work starts."

@@ -19,6 +19,7 @@ export default async function ContactPage({
   return (
     <>
       <PageHero
+        art="/images/brand/head-contact.jpg"
         eyebrow="Contact"
         title="Tell the shop what the piece should become."
         lede="Appointments are recommended. If a firearm is being shipped in, call before the seller prints a label."

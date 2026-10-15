@@ -14,6 +14,7 @@ export default function FirearmsPage() {
   return (
     <>
       <PageHero
+        art="/images/brand/head-fire.jpg"
         eyebrow="On the floor"
         title="What is listed right now."
         lede="Three pre-owned guns, with the prices and descriptions AWG published. Photos are of those guns. A listing here does not complete a sale, and nothing on this site ships a firearm to a house."

@@ -19,6 +19,7 @@ export default function FaqPage() {
   return (
     <>
       <PageHero
+        art="/images/brand/head-faq.jpg"
         eyebrow="FAQ"
         title="The answers that were buried on the old site."
         lede="Transfers, deposits, shipping, and what you need in your pocket at pickup. If your question is about a specific gun, call and ask before you order it from someone else."

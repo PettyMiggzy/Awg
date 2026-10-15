@@ -15,6 +15,7 @@ export default function WorkPage() {
   return (
     <>
       <PageHero
+        art="/images/brand/head-work.jpg"
         eyebrow="Work"
         title="The photos are the portfolio."
         lede="Ports, optic cuts, Cerakote, engraving, stipple, and fitted cases from the Indianapolis bench. The grid is work the shop published. The row under it is from @mr.awg."
