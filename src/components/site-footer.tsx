@@ -64,6 +64,18 @@ export function SiteFooter() {
           A buyer picks up in person at {addressLine} after a passed background check.
         </p>
       </div>
+      <p className="mx-auto mt-6 max-w-6xl text-xs text-muted-foreground">
+        Built and maintained by{" "}
+        <a
+          href="https://www.simplicitybuilds.com/"
+          target="_blank"
+          rel="noreferrer"
+          className="underline-offset-4 hover:text-primary hover:underline"
+        >
+          Simplicity Builds
+        </a>
+        .
+      </p>
     </footer>
   );
 }
